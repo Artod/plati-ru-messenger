@@ -29,22 +29,22 @@ End If
 
 %><!DOCTYPE html>
 <html>
-    <head>
+	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8" />
 		<meta charset="utf-8" />
-		
-        <title><% If Who = "g" Then Response.Write "Internet Support" Else Response.Write "Веб Мессенджер" %></title>
 
-        <link rel="stylesheet" href="/css/main.css?5" />
+		<title><% If Who = "g" Then Response.Write "Internet Support" Else Response.Write "Веб Мессенджер" %></title>
 
-        <script src="/js/json2.js"></script>
-        <script src="/js/jquery-1.7.2.min.js"></script>
-        <script src="/js/underscore-1.3.3.min.js"></script>
-        <script src="/js/backbone-0.9.2.min.js"></script>
+		<link rel="stylesheet" href="/css/main.css?5" />
+
+		<script src="/js/json2.js"></script>
+		<script src="/js/jquery-1.7.2.min.js"></script>
+		<script src="/js/underscore-1.3.3.min.js"></script>
+		<script src="/js/backbone-0.9.2.min.js"></script>
 		<script src="/js/jquery.draggable-0.9.js"></script>
 		<script src="/js/jquery.scroll-1.0.js"></script>
 		<script src="/js/soundmanager2.js"></script>		
-        <script src="/js/messenger.js?7"></script>
+		<script src="/js/messenger.js?7"></script>
 		<script>
 			window.messenger = {
 				id_s: <%= ID_S %>,
@@ -55,9 +55,9 @@ End If
 				who: '<%= Who %>'
 			}
 		</script>
-    </head>
-    <body>
-        <div id="top">
+	</head>
+	<body>
+		<div id="top">
 			<ul id="tabs">
 				<li class="tabs tabs-selected" id="tab-contacts"><a href="#!/contacts"><% If Who = "s" Then Response.Write "Посетители" Else Response.Write "Продавцы" End IF %></a></li>
 				<li class="tabs" id="tab-archive"><a href="#!/archive">Архив</a></li>
@@ -77,9 +77,9 @@ End If
 					<li><a href="#" class="more-refresh"><img src="../img/refresh.gif" title="Обновить" alt="Обновить" /></a></li>
 				<% End If %>
 			</ul>
-        </div>
+		</div>
 
-        <div id="left">
+		<div id="left">
 			<div class="contacts-scroll-viewport">
 				<div class="contacts-scroll-walker">
 					<div id="contacts-notify" style="display:none;">
@@ -91,14 +91,14 @@ End If
 					<ul id="contacts"<% If Who = "g" Then Response.Write " class=""contacts-support""" Else Response.Write "" %>></ul>
 				</div>
 			</div>
-        </div>
+		</div>
 
-        <div id="main">
-            <div id="history">
-                <div class="messages-wrap">
-                    <ul id="messages"></ul>
-                </div>
-            </div>
+		<div id="main">
+			<div id="history">
+				<div class="messages-wrap">
+					<ul id="messages"></ul>
+				</div>
+			</div>
 
 			<div id="bottom">
 				<div id="soundmanager-debug" style="display:none;"></div>
@@ -129,7 +129,7 @@ End If
 					</div>
 				<% End If %>
 			</div>
-        </div>
+		</div>
 
 		<script type="text/template" id="template-contacts">
 			<div class="contacts-status"></div>
@@ -178,5 +178,5 @@ End If
 
 			<span class="messages-<<%= "%" %>= name ? 'guest' : 'support' %>"><<%= "%" %>= message %></span>
 		</script>
-    </body>
+	</body>
 </html> 
